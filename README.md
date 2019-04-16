@@ -74,72 +74,17 @@ export default {
 ___
 ## Options
 
-<table style="text-align: left">
-<thead>
-	<tr>
-		<th>name</th>
-		<th>type</th>
-		<th>default</th>
-		<th>description</th>
-	<tr/>
-</thead>
-<tbody>
-	<tr>
-		<td>image</td>
-		<td>String</td>
-		<td>undefined</td>
-		<td><em>Required</em> image path</td>
-	<tr/>
-	<tr>
-		<td>passive</td>
-		<td>Object</td>
-		<td></td>
-		<td></td>
-	<tr/>
-	<tr>
-		<td>passive.saturate</td>
-		<td>Number</td>
-		<td>0</td>
-		<td></td>
-	<tr/>
-	<tr>
-		<td>passive.color</td>
-		<td>[color code, color code]</td>
-		<td>[null, null]</td>
-		<td>color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a></td>
-	<tr/>
-	<tr>
-		<td>active</td>
-		<td>Object</td>
-		<td></td>
-		<td></td>
-	<tr/>
-	<tr>
-		<th>active.saturate</th>
-		<th>Number</th>
-		<th>1</th>
-		<th></th>
-	<tr/>
-	<tr>
-		<th>active.color</th>
-		<th>[color code, color code]</th>
-		<th>[0xe7475e, 0xf0d879]</th>
-		<th>color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a></th>
-	<tr/>
-	<tr>
-		<th>duration</th>
-		<th>Number</th>
-		<th>0.8</th>
-		<th>Animation Sec</th>
-	<tr/>
-	<tr>
-		<th>ease</th>
-		<th>String, Object</th>
-		<th>Power2.easeOut</th>
-		<th>Animation Easing: <a href="https://greensock.com/docs/Easing" target="_blank">GreenSock Ease</a></th>
-	<tr/>
-</tbody>
-</table>
+|name|type|default|description|
+|----|----|----|----|
+|image|String|undefined|<strong style="color:#f09">Required</strong> image path|
+|passive|Object| | |
+|passive.saturate|Number|0| |
+|passive.color|[color code, color code]|[null, null]|color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a>|
+|active|Object| | |
+|active.saturate|Number|1| |
+|active.color|[color code, color code]|[0xe7475e, 0xf0d879]|color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a>|
+|duration|Number|0.8|Animation Duration (Sec)|
+|ease|String, Object|Power2.easeOut|Animation Easing: <a href="https://greensock.com/docs/Easing" target="_blank">GreenSock Ease</a>|
 
 
 ___
