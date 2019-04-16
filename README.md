@@ -1,5 +1,7 @@
 # vue-svg-duotone
 
+<img src="sample.png" />
+
 <ul>
 	<li><a href="http://yoshihitofujiwara.github.io/vue-svg-duotone/index.html" target="_blank">DEMO</a></li>
 </ul>
