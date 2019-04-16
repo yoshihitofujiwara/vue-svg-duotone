@@ -85,34 +85,34 @@ ___
 </thead>
 <tbody>
 	<tr>
-		<th>image</th>
-		<th>String</th>
-		<th>undefined</th>
-		<th><em>Required</em> image path</th>
+		<td>image</td>
+		<td>String</td>
+		<td>undefined</td>
+		<td><em>Required</em> image path</td>
 	<tr/>
 	<tr>
-		<th>passive</th>
-		<th>Object</th>
-		<th></th>
-		<th></th>
+		<td>passive</td>
+		<td>Object</td>
+		<td></td>
+		<td></td>
 	<tr/>
 	<tr>
-		<th>passive.saturate</th>
-		<th>Number</th>
-		<th>0</th>
-		<th></th>
+		<td>passive.saturate</td>
+		<td>Number</td>
+		<td>0</td>
+		<td></td>
 	<tr/>
 	<tr>
-		<th>passive.color</th>
-		<th>[color code, color code]</th>
-		<th>[null, null]</th>
-		<th>color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a></th>
+		<td>passive.color</td>
+		<td>[color code, color code]</td>
+		<td>[null, null]</td>
+		<td>color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a></td>
 	<tr/>
 	<tr>
-		<th>active</th>
-		<th>Object</th>
-		<th></th>
-		<th></th>
+		<td>active</td>
+		<td>Object</td>
+		<td></td>
+		<td></td>
 	<tr/>
 	<tr>
 		<th>active.saturate</th>
