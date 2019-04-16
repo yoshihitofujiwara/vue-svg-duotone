@@ -1,27 +1,174 @@
-# vue-svg-duotone
+# vue-svg-duotone3
 
-> A Vue.js project
+<ul>
+	<li><a href="http://yoshihitofujiwara.github.io/vue-svg-duotone/index.html" target="_blank">DEMO</a></li>
+</ul>
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+___
+## Usage
 
-# serve with hot reload at localhost:8080
-npm run dev
+```
+<template>
+  <div id="app">
+		<h1>vue-svg-duotone</h1>
+		<p><a href="" target="_blank">
+			<SvgDuotone class="svg_duotone"
+				:image="image"
+				:passive="passive"
+				:active="active"
+				:duration="duration"
+				:ease="ease"
+			/>
 
-# build for production with minification
-npm run build
+			<!--
+			<SvgDuotone class="svg_duotone"
+				image="./assets/img/ANJ101035822.jpg"
+				:passive="{saturate: 1}"
+				:active="{saturate: 0, color: [0xe7475e, 0xf0d879]}"
+				:duration="0.8"
+			/>
+			-->
+		</a></p>
+  </div>
+</template>
 
-# build for production and view the bundle analyzer report
-npm run build --report
 
-# run e2e tests
-npm run e2e
+<script>
+import SvgDuotone from "./components/SvgDuotone.vue";
 
-# run all tests
-npm test
+export default {
+  name: "app",
+  components: {
+    SvgDuotone
+  },
+
+	data(){
+		return {
+			image: "./assets/img/ANJ101035822.jpg",
+			passive: {
+				saturate: 1,
+				color: [null, null]
+			},
+			active: {
+				saturate: 0,
+				color: [0xe7475e, 0xf0d879]
+			},
+			duration: 0.8,
+			ease: "Power1.easeOut"
+		}
+	}
+}
+</script>
+
+
+<style>
+.svg_duotone{
+	width: 576px;
+  height: 384px;
+  cursor: pointer;
+}
+</style>
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+___
+## Options
+
+<table style="text-align: left">
+<thead>
+	<tr>
+		<th>name</th>
+		<th>type</th>
+		<th>default</th>
+		<th>description</th>
+	<tr/>
+</thead>
+<tbody>
+	<tr>
+		<th>image</th>
+		<th>String</th>
+		<th>undefined</th>
+		<th><em>Required</em> image path</th>
+	<tr/>
+	<tr>
+		<th>passive</th>
+		<th>Object</th>
+		<th></th>
+		<th></th>
+	<tr/>
+	<tr>
+		<th>passive.saturate</th>
+		<th>Number</th>
+		<th>0</th>
+		<th></th>
+	<tr/>
+	<tr>
+		<th>passive.color</th>
+		<th>[color code, color code]</th>
+		<th>[null, null]</th>
+		<th>color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a></th>
+	<tr/>
+	<tr>
+		<th>active</th>
+		<th>Object</th>
+		<th></th>
+		<th></th>
+	<tr/>
+	<tr>
+		<th>active.saturate</th>
+		<th>Number</th>
+		<th>1</th>
+		<th></th>
+	<tr/>
+	<tr>
+		<th>active.color</th>
+		<th>[color code, color code]</th>
+		<th>[0xe7475e, 0xf0d879]</th>
+		<th>color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a></th>
+	<tr/>
+	<tr>
+		<th>duration</th>
+		<th>Number</th>
+		<th>0.8</th>
+		<th>Animation Sec</th>
+	<tr/>
+	<tr>
+		<th>ease</th>
+		<th>String, Object</th>
+		<th>Power2.easeOut</th>
+		<th>Animation Easing: <a href="https://greensock.com/docs/Easing" target="_blank">GreenSock Ease</a></th>
+	<tr/>
+</tbody>
+</table>
+
+
+___
+
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
