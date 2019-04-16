@@ -1,4 +1,4 @@
-# vue-svg-duotone3
+# vue-svg-duotone
 
 <ul>
 	<li><a href="http://yoshihitofujiwara.github.io/vue-svg-duotone/index.html" target="_blank">DEMO</a></li>

@@ -14,6 +14,7 @@
 				:off="{saturate: 1}"
 				:active="{saturate: 0, color: [0xe7475e, 0xf0d879]}"
 				:duration="0.8"
+				:ease="Power2.easeInOut"
 			/> -->
 		</a></p>
   </div>
