@@ -96,8 +96,8 @@ ___
 |active.color|[color code, color code]|[0xe7475e, 0xf0d879]|color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a>|
 |duration|Number|0.8|Animation Duration (Sec)|
 |ease|String, Object|Power2.easeOut|Animation Easing: <a href="https://greensock.com/docs/Easing" target="_blank">GreenSock Ease</a>|
-|mouseenter|event| | mouseenter emit |
-|mouseleave|event| | mouseenter emit |
+|mouseenter|event| | emit mouseenter |
+|mouseleave|event| | emit mouseleave |
 ___
 
 
