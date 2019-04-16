@@ -1,8 +1,12 @@
 <template>
   <div id="app">
 		<h1>vue-svg-duotone</h1>
-		<p><a href="https://github.com/yoshihitofujiwara/vue-svg-duotone" target="_blank">
+		<p><a
+			href="https://github.com/yoshihitofujiwara/vue-svg-duotone" target="_blank">
 			<SvgDuotone class="svg_duotone"
+				@mouseleave="onPassive"
+				@mouseenter="onActive"
+				ref="svg_duotone"
 				:image="image"
 				:passive="passive"
 				:active="active"
@@ -23,6 +27,8 @@
 
 <script>
 import dat from "dat.gui";
+import { TweenLite } from "gsap/TweenMax";
+
 import SvgDuotone from "./components/SvgDuotone.vue";
 
 let gui;
@@ -142,7 +148,16 @@ export default {
 		folderON.add(this.active, "saturate", 0, 1);
 
 		gui.add(this, "duration", 0.1, 3.0);
-		gui.add(this, "ease", params.easeList).set(3);
+		gui.add(this, "ease", params.easeList);
+	},
+
+	methods: {
+		onActive(){
+			this.$refs.svg_duotone.onActive();
+		},
+		onPassive(){
+			this.$refs.svg_duotone.onPassive();
+		}
 	}
 }
 </script>

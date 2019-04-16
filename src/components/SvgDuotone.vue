@@ -2,7 +2,11 @@
 	template
 ==========================================================================*/
 <template>
-  <svg @mouseenter="onActive" @mouseleave="onPassive">
+  <svg
+		@mouseenter="$emit('mouseenter')"
+		@mouseleave="$emit('mouseleave')"
+	>
+  <!-- <svg> -->
     <filter id="duotone">
       <feColorMatrix type="saturate" :values="saturate"></feColorMatrix>
       <feComponentTransfer color-interpolation-filters="sRGB">

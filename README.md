@@ -12,23 +12,25 @@ ___
 <template>
   <div id="app">
 		<h1>vue-svg-duotone</h1>
-		<p><a href="" target="_blank">
+		<p><a
+			href="https://github.com/yoshihitofujiwara/vue-svg-duotone" target="_blank">
 			<SvgDuotone class="svg_duotone"
+				@mouseleave="onPassive"
+				@mouseenter="onActive"
+				ref="svg_duotone"
 				:image="image"
 				:passive="passive"
 				:active="active"
 				:duration="duration"
 				:ease="ease"
 			/>
-
-			<!--
-			<SvgDuotone class="svg_duotone"
-				image="./assets/img/ANJ101035822.jpg"
-				:passive="{saturate: 1}"
+			<!-- <SvgDuotone class="svg_duotone"
+				image="./assets/img/img01.jpg"
+				:off="{saturate: 1}"
 				:active="{saturate: 0, color: [0xe7475e, 0xf0d879]}"
 				:duration="0.8"
-			/>
-			-->
+				:ease="Power2.easeInOut"
+			/> -->
 		</a></p>
   </div>
 </template>
@@ -56,6 +58,15 @@ export default {
 			},
 			duration: 0.8,
 			ease: "Power1.easeOut"
+		}
+	},
+
+	methods: {
+		onActive(){
+			this.$refs.svg_duotone.onActive();
+		},
+		onPassive(){
+			this.$refs.svg_duotone.onPassive();
 		}
 	}
 }
@@ -85,8 +96,8 @@ ___
 |active.color|[color code, color code]|[0xe7475e, 0xf0d879]|color code: <a href="https://gka.github.io/chroma.js/" target="_blank">chroma.js</a>|
 |duration|Number|0.8|Animation Duration (Sec)|
 |ease|String, Object|Power2.easeOut|Animation Easing: <a href="https://greensock.com/docs/Easing" target="_blank">GreenSock Ease</a>|
-
-
+|mouseenter|event| | mouseenter emit |
+|mouseleave|event| | mouseenter emit |
 ___
 
 
