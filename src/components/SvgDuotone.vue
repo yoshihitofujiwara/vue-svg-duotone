@@ -179,10 +179,7 @@ export default {
 	style
 ==========================================================================*/
 <style scoped>
-/*
 svg {
-	width: 576px;
-  height: 384px;
+	-webkit-tap-highlight-color: transparent;
 }
-*/
 </style>

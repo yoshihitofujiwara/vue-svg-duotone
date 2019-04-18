@@ -1,8 +1,6 @@
 <template>
   <div id="app">
 		<h1>vue-svg-duotone</h1>
-		<p><a
-			href="https://github.com/yoshihitofujiwara/vue-svg-duotone" target="_blank">
 			<SvgDuotone class="svg_duotone"
 				@mouseleave="onPassive"
 				@mouseenter="onActive"
@@ -20,7 +18,6 @@
 				:duration="0.8"
 				:ease="Power2.easeInOut"
 			/> -->
-		</a></p>
   </div>
 </template>
 
@@ -28,7 +25,6 @@
 <script>
 import dat from "dat.gui";
 import { TweenLite } from "gsap/TweenMax";
-
 import SvgDuotone from "./components/SvgDuotone.vue";
 
 let gui;
@@ -173,8 +169,8 @@ export default {
 }
 
 .svg_duotone{
-	width: 576px;
-  height: 384px;
+	width: 640px;
+  height: 360px;
   cursor: pointer;
 }
 </style>

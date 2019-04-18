@@ -1,11 +1,9 @@
 # vue-svg-duotone
-
-<img src="sample.png" />
-
 <ul>
 	<li><a href="http://yoshihitofujiwara.github.io/vue-svg-duotone/index.html" target="_blank">DEMO</a></li>
 </ul>
 
+<img src="sample.png" />
 
 ___
 ## Usage
@@ -102,8 +100,20 @@ ___
 |mouseleave|event| | emit mouseleave |
 ___
 
+## Supports
+- Chrome
+- ~~Safari~~
+- Firefox
+- Edge
+- IE 11
+- Android Chrome
+- ~~ios Safari~~
 
+___
 ## Project setup
+
+yarn or npm
+
 ```
 yarn install
 ```
