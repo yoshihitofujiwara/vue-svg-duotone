@@ -16,7 +16,7 @@ export const RAD2DEG = 180 / Math.PI;
  */
 export function lerp(val, min, max) {
 	return (max - min) * val + min;
-};
+}
 
 
 /**
@@ -126,4 +126,4 @@ export function createStyle(event) {
 		from: style01,
 		to: style02
 	};
-};
+}

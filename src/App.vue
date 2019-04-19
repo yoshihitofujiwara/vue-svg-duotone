@@ -1,9 +1,10 @@
 <template>
   <div id="app">
 		<h1>vue-svg-duotone</h1>
-			<SvgDuotone class="svg_duotone"
+			<SvgDuotone
 				@mouseleave="onPassive"
 				@mouseenter="onActive"
+				@touchstart="toggle"
 				ref="svg_duotone"
 				:image="image"
 				:passive="passive"
@@ -24,7 +25,6 @@
 
 <script>
 import dat from "dat.gui";
-import { TweenLite } from "gsap/TweenMax";
 import SvgDuotone from "./components/SvgDuotone.vue";
 
 let gui;
@@ -48,7 +48,8 @@ export default {
 				color: [0xe7475e, 0xf0d879]
 			},
 			duration: 0.8,
-			ease: "Power1.easeOut"
+			ease: "Power1.easeOut",
+			isActive: false
 		}
 	},
 
@@ -153,12 +154,25 @@ export default {
 		},
 		onPassive(){
 			this.$refs.svg_duotone.onPassive();
+		},
+		toggle(){
+			this.isActive = !this.isActive;
+			if(this.isActive){
+				this.onActive();
+			} else {
+				this.onPassive();
+			}
 		}
 	}
 }
 </script>
 
 <style>
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -167,10 +181,19 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
-.svg_duotone{
-	width: 640px;
+h1{
+	margin-bottom: 20px;
+}
+svg {
+  width: 640px;
   height: 360px;
   cursor: pointer;
+}
+@media all and (max-width: 768px){
+	svg {
+		width: 100vw;
+		height: 56.25vw;
+		/* height: 100%; */
+	}
 }
 </style>
