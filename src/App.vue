@@ -25,11 +25,8 @@
 
 <script>
 import dat from "dat.gui";
-<<<<<<< HEAD
 import { TweenLite } from "gsap/TweenMax";
 import * as utils from "./assets/js/utils.js";
-=======
->>>>>>> 1fc83fc91246e32b88b5daf3a4f05ef297020137
 import SvgDuotone from "./components/SvgDuotone.vue";
 
 let gui;
@@ -165,21 +162,12 @@ export default {
 			this.$refs.svg_duotone.onPassive();
 		},
 		toggle(){
-<<<<<<< HEAD
       this.isActive = !this.isActive;
       if(this.isActive){
         this.onActive();
       } else {
         this.onPassive();
       }
-=======
-			this.isActive = !this.isActive;
-			if(this.isActive){
-				this.onActive();
-			} else {
-				this.onPassive();
-			}
->>>>>>> 1fc83fc91246e32b88b5daf3a4f05ef297020137
 		}
 	}
 }
