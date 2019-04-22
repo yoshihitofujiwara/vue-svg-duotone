@@ -2,7 +2,39 @@
 // version: 0.0.5
 // author: yoshihito fujiwara
 
+
 export const RAD2DEG = 180 / Math.PI;
+
+export const ua = navigator.userAgent.toLowerCase();
+
+
+/**
+ * isPC
+ */
+export function isPC() {
+	return ua.indexOf("windows") > -1 || ua.indexOf("intel mac os x ") > -1 && ua.indexOf("mobile") == -1;
+}
+
+/**
+ * isSD
+ */
+export function isSD() {
+	return ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("android") > -1;
+}
+
+/**
+ * isTB
+ */
+export function isTB() {
+	return ua.indexOf("ipad") > -1 || ua.indexOf("android") > -1 && ua.indexOf("mobile") < 0;
+}
+
+/**
+ * isSP
+ */
+export function isSP() {
+	return ua.indexOf("iphone") > -1 || ua.indexOf("android") > -1 && ua.indexOf("mobile") > -1;
+}
 
 
 /**
@@ -16,7 +48,7 @@ export const RAD2DEG = 180 / Math.PI;
  */
 export function lerp(val, min, max) {
 	return (max - min) * val + min;
-};
+}
 
 
 /**
@@ -39,17 +71,15 @@ export function getMouseEventAngle(event) {
  */
 export function getNormalizeOffset(event) {
 	let cx = event.srcElement.offsetWidth * 0.5;
-  let cy = event.srcElement.offsetHeight * 0.5;
+	let cy = event.srcElement.offsetHeight * 0.5;
 	let y = cy - event.offsetY;
 	let x = event.offsetX - cx;
 
 	return {
-    x: x / cx,
+		x: x / cx,
 		y: y / cy
-  };
+	};
 }
-
-
 
 
 /**
@@ -126,4 +156,4 @@ export function createStyle(event) {
 		from: style01,
 		to: style02
 	};
-};
+}

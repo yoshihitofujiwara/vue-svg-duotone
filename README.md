@@ -85,7 +85,7 @@ export default {
 ___
 ## Options
 
-|name|type|default|description|
+|Param|Type|Default|Description|
 |----|----|----|----|
 |image|String|undefined|<strong style="color:#f09">Required</strong> image path|
 |passive|Object| | |
@@ -98,16 +98,17 @@ ___
 |ease|String, Object|Power2.easeOut|Animation Easing: <a href="https://greensock.com/docs/Easing" target="_blank">GreenSock Ease</a>|
 |mouseenter|event| | emit mouseenter |
 |mouseleave|event| | emit mouseleave |
+|touchstart|event| | emit touchstart |
 ___
 
 ## Supports
 - Chrome
-- ~~Safari~~
+- Safari
 - Firefox
 - Edge
 - IE 11
 - Android Chrome
-- ~~ios Safari~~
+- ios Safari
 
 ___
 ## Project setup

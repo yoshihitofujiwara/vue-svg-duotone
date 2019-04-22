@@ -5,6 +5,7 @@
   <svg
 		@mouseenter="$emit('mouseenter')"
 		@mouseleave="$emit('mouseleave')"
+		@touchstart="$emit('touchstart')"
 	>
   <!-- <svg> -->
     <filter id="duotone">
